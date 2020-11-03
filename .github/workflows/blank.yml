@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-      - name: 'Get Weather'
-        run: bash ./weather.sh
+#       - name: 'Get Weather'
+#         run: bash ./weather.sh
 #       - name: 'Get Date'
 #         run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
 #       - name: 'Send mail'
@@ -26,5 +26,9 @@ jobs:
 #           to: yifeng.ruan@gmail.com
 #           from: GitHub Actions
 #           content_type: text/html
-      - name: 'curl'
-        run: bash ./curl.sh
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+           python-version: 3.7
+      - name: 'sendDingding'
+        run: python BaiduIndex.py
