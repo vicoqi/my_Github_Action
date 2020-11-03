@@ -26,12 +26,11 @@ jobs:
 #           to: yifeng.ruan@gmail.com
 #           from: GitHub Actions
 #           content_type: text/html
-      - name: Set up Python 3.7
+      - name: 'Set up Python 3.7'
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
-      # 安装依赖
-      - name: Install dependencies
+      - name: 'Install dependencies'
         run: |
           python -m pip install --upgrade pip
           pip install setuptools requests BeautifulSoup
