@@ -1,6 +1,7 @@
 name: 'curl'
 
 on:
+  push:
   schedule:
     - cron: '*/1 * * * *'
 
