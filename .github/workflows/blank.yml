@@ -34,6 +34,6 @@ jobs:
       - name: 'Install dependencies'
         run: |
           python -m pip install --upgrade pip
-          pip install setuptools requests beautifulsoup4
+          pip install setuptools requests beautifulsoup4 urllib.parse base64 hashlib hmac time
       - name: 'sendDingding'
         run: python BaiduIndex.py
