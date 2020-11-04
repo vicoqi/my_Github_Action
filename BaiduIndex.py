@@ -34,7 +34,7 @@ class Spider():
         self.dingdingurl = "https://oapi.dingtalk.com/robot/send?access_token=cad451762de13cc3c67275fe9e939ea3f58cca657a3cac94faedb220952df0a7" + "&timestamp=" + timestamp + "&sign=" + sign;
 
     def send(self):
-        curTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        curTime = (datetime.datetime.now() + datetime.timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')
         print(curTime)
         data = {
             "msgtype": "text",
