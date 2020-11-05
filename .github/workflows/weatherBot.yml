@@ -1,7 +1,7 @@
 name: 'WeatherBot'
 
 on:
-  push
+  push:
   schedule:
     - cron: '30 1-8 * * 1-5'
 
@@ -20,4 +20,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install setuptools requests
       - name: 'sendDingding'
-        run: python WeatherBot.py
+        run: python Weather.py
