@@ -1,9 +1,8 @@
 name: 'WeatherBot'
 
 on:
-  push:
   schedule:
-    - cron: '30 1-8 * * 1-5'
+    - cron: '0 0,10 * * *'
 
 jobs:
   bot:
