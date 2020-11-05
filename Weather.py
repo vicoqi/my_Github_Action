@@ -48,7 +48,7 @@ class MonitorWeather():
         data = {
             "msgtype": "text",
             # "text": {"content": curTime +" 上证指数："+self.text},
-            "text": {"content": curTime + '\n' +self.result},
+            "text": {"content": curTime + '    上海' +'\n' +self.result},
             "at": {
                 # "atMobiles": [
                 #     "156xxxx8827",
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     suggestion = ""
     nullSuggestion = ""
 
-    url = "https://api.seniverse.com/v3/weather/daily.json?key=SkvZZVqAG5HrAotL3&location=chongqing&language=zh-Hans&unit=c&start=0&days=5"
+    url = "https://api.seniverse.com/v3/weather/daily.json?key=SkvZZVqAG5HrAotL3&location=shanghai&language=zh-Hans&unit=c&start=0&days=5"
     json = requests.get(url).json()
     # print(json)
     # print(json["results"])
